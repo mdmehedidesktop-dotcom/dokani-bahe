@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project_3/utils/colors.dart';
 import 'package:project_3/view/custom_widget/search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:project_3/view/custom_widget/text.dart';
 
 import '../../custom_widget/slider.dart';
+import '../../custom_widget/title_heading.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -41,6 +43,9 @@ class _HomeState extends State<Home> {
           children: [
             SearchWidget(),
             CustomSlider(),
+            TitleHeading(text: 'Categories', onTap: () {  },),
+            TitleHeading(text: 'Categories', onTap: () {  },),
+            TitleHeading(text: 'Categories', onTap: () {  },)
 
 
           ],
@@ -50,5 +55,7 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
 
 
