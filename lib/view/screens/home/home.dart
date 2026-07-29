@@ -3,9 +3,11 @@ import 'package:project_3/utils/colors.dart';
 import 'package:project_3/view/custom_widget/search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:project_3/view/custom_widget/text.dart';
+import 'package:project_3/view/screens/all_product/all_product.dart';
 import 'package:project_3/view/screens/home/widget/category_widget.dart';
 import 'package:project_3/view/screens/home/widget/featured_card.dart';
 
+import '../../custom_widget/customCard.dart';
 import '../../custom_widget/slider.dart';
 import '../../custom_widget/title_heading.dart';
 class Home extends StatefulWidget {
@@ -217,12 +219,7 @@ class _HomeState extends State<Home> {
           CustomText(text: "Bahe ",fontWeight: FontWeight.bold,fSize: 25,color: Colors.orangeAccent,),
         ],
       ) ,actions: [
-        Badge(
-          label: Text("0"),
-          backgroundColor: Colors.orangeAccent,
-          textColor: Colors.white,
-          child:Icon(Icons.shopping_cart_outlined), 
-        ),
+        CustomCard(),
         
         SizedBox(width: 10,),
       ],
@@ -239,7 +236,9 @@ class _HomeState extends State<Home> {
 
             categories(),
             
-            TitleHeading(text: 'Featured Product', onTap: () {  },),
+            TitleHeading(text: 'Featured Product', onTap: () { 
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>AllProduct()));
+            },),
             
             SizedBox(
               height: 180,
@@ -361,6 +360,8 @@ class _HomeState extends State<Home> {
           );
   }
 }
+
+
 
 
 
