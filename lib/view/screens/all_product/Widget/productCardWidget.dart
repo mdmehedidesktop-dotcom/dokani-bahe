@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../../utils/colors.dart';
 import '../../../custom_widget/text.dart';
 class ProductCardWidget extends StatelessWidget {
+  final productData;
   const ProductCardWidget({
-    super.key,
+    super.key, this.productData,
   });
 
   @override
@@ -16,12 +17,12 @@ class ProductCardWidget extends StatelessWidget {
             alignment: Alignment.topRight,
             children: [
               Container(
-                height: 130,
+                height: 140,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc1E8vRryz1uKhCBOIyaP8PXV0PVk2-TxKCQ&s"))
+                        image: NetworkImage(productData['image']??'')),
 
                 ),
               ),
@@ -40,13 +41,13 @@ class ProductCardWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                CustomText(text: "Bage"),
+                CustomText(text: productData['name']??''),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CustomText(text: "৳ 2550",fontWeight: FontWeight.bold,),
-                    CustomText(text: "৳ 3099",fontWeight: FontWeight.bold,color: Colors.black38,tDeco: TextDecoration.lineThrough,),
+                    CustomText(text: productData['price']??'',fontWeight: FontWeight.bold,),
+                    CustomText(text: productData['old']??'',fontWeight: FontWeight.bold,color: Colors.black38,tDeco: TextDecoration.lineThrough,),
                     CustomText(text: "%25",fontWeight: FontWeight.bold,color: AppColor.primaryColor,),
                   ],
                 ),

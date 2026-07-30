@@ -6,7 +6,10 @@ import '../../custom_widget/customCart.dart';
 import 'Widget/filter_section.dart';
 import 'Widget/productCardWidget.dart';
 class AllProduct extends StatelessWidget {
-  const AllProduct({super.key});
+  final List featureProducts;
+  const AllProduct({super.key,required this.featureProducts});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +29,14 @@ class AllProduct extends StatelessWidget {
           Expanded(
             child: GridView.builder(
               shrinkWrap: true,
-              itemCount: 50,
+              itemCount: featureProducts.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                   childAspectRatio: .8
                 ) ,
-                itemBuilder:(context,i)=>ProductCardWidget()),
+                itemBuilder:(context,i)=>ProductCardWidget(
+                  productData: featureProducts[i],
+                )),
           ),
         ],
       )

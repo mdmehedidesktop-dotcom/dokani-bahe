@@ -237,7 +237,7 @@ class _HomeState extends State<Home> {
             categories(),
             
             TitleHeading(text: 'Featured Product', onTap: () { 
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>AllProduct()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>AllProduct(featureProducts:featureProducts)));
             },),
             
             SizedBox(
