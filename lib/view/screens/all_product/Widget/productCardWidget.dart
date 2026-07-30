@@ -12,15 +12,28 @@ class ProductCardWidget extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          Container(
-            height: 130,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc1E8vRryz1uKhCBOIyaP8PXV0PVk2-TxKCQ&s"))
+          Stack(
+            alignment: Alignment.topRight,
+            children: [
+              Container(
+                height: 130,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc1E8vRryz1uKhCBOIyaP8PXV0PVk2-TxKCQ&s"))
 
-            ),
+                ),
+              ),
+
+              Positioned(
+                top: 5,
+                  right: 5,
+                  child: IconButton(onPressed: () {  },
+                    icon: Icon(Icons.favorite),)
+              )
+
+            ],
           ),
           Padding(
             padding: const EdgeInsets.all(6.0),
