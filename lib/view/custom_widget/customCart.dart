@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class CustomCard extends StatelessWidget {
-  const CustomCard({
+class CustomCart extends StatelessWidget {
+  const CustomCart({
     super.key,
   });
 

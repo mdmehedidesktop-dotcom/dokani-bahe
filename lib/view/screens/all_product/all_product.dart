@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_3/utils/colors.dart';
 import 'package:project_3/view/custom_widget/text.dart';
 
-import '../../custom_widget/customCard.dart';
+import '../../custom_widget/customCart.dart';
 import 'Widget/filter_section.dart';
 import 'Widget/productCardWidget.dart';
 class AllProduct extends StatelessWidget {
@@ -16,7 +16,7 @@ class AllProduct extends StatelessWidget {
         fSize: 20,),actions: [
         Icon(Icons.search),
         SizedBox(width: 10,),
-        CustomCard(),
+        CustomCart(),
         SizedBox(width: 10,),
       ],),
       body: Column(

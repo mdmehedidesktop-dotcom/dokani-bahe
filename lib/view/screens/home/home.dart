@@ -7,7 +7,7 @@ import 'package:project_3/view/screens/all_product/all_product.dart';
 import 'package:project_3/view/screens/home/widget/category_widget.dart';
 import 'package:project_3/view/screens/home/widget/featured_card.dart';
 
-import '../../custom_widget/customCard.dart';
+import '../../custom_widget/customCart.dart';
 import '../../custom_widget/slider.dart';
 import '../../custom_widget/title_heading.dart';
 class Home extends StatefulWidget {
@@ -219,7 +219,7 @@ class _HomeState extends State<Home> {
           CustomText(text: "Bahe ",fontWeight: FontWeight.bold,fSize: 25,color: Colors.orangeAccent,),
         ],
       ) ,actions: [
-        CustomCard(),
+        CustomCart(),
         
         SizedBox(width: 10,),
       ],
