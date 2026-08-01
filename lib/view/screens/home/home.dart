@@ -468,7 +468,7 @@ class _HomeState extends State<Home> {
                       image: DecorationImage(
                         fit: BoxFit.cover,
                           image:
-                      NetworkImage(image[i]["image"]))
+                      NetworkImage(TopTrending[i]['image']))
                     ),
                   ),
                   Padding(padding: EdgeInsets.all(8.0),
