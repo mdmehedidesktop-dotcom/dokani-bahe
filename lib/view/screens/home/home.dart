@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_3/utils/colors.dart';
+import 'package:project_3/view/custom_widget/custom_button.dart';
 import 'package:project_3/view/custom_widget/search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:project_3/view/custom_widget/text.dart';
@@ -400,7 +401,7 @@ class _HomeState extends State<Home> {
 
 
             },),
-            SizedBox(height: 190,
+            SizedBox(height: 270,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
                 itemCount: 5,
@@ -410,8 +411,36 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
+                    height: 160,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                          image:
+                      NetworkImage("https://dokanibahe.com/storage/products/313d7e0e-7794-4c9d-b04f-8935e9cca9c0.jpeg"))
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomText(text: 'Leadis hejab',fontWeight: FontWeight.bold,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
 
-                  )
+                            CustomText(text: "৳ 1720",fontWeight: FontWeight.bold,),
+
+                            CustomText(text: "৳ 2220",tDeco: TextDecoration.lineThrough,color: Colors.black38,),
+                          ],
+                        ),
+                        CustomButton(title: "By Now", onTap: (){})
+
+                      ],
+                    ),
+
+                  ),
                 ],
 
               ),
