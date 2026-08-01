@@ -201,6 +201,56 @@ class _HomeState extends State<Home> {
       "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5yCLz0vm_34z4lCFIvc83znBShc4Qwaf6VQ&s",
     },
   ];
+  List TopTrending= [
+    {
+      "name": "Men's Casual T-Shirt",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXf76z5dxilDF98lFdfP3XWDFK2d9HYS2xA&s",
+      "price": "৳ 6,564",
+      "old": "৳ 82,323",
+    },
+    {
+      "name": "Men's Denim Jacket",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOUwqPPX4BcP-aL5kMGn3ekD-ja-SL5XTT9Q&s",
+      "price": "৳ 4,299",
+      "old": "৳ 5,999",
+    },
+    {
+      "name": "Men's Polo Shirt",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn4LUEZFPIBY6pENOuLuCRJbnsLQtPrf6aA&s",
+      "price": "৳ 2,199",
+      "old": "৳ 3,199",
+    },
+    {
+      "name": "Women's Floral Dress",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg9eSXV43xiFxZAx4E9jHoTy3AQO5FRnATEw&s",
+      "price": "৳ 3,499",
+      "old": "৳ 4,799",
+    },
+    {
+      "name": "Women's Hoodie",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz61dN8NpswBuEPiGJDvgSlIpbusvjRIzuFQ&s",
+      "price": "৳ 2,799",
+      "old": "৳ 3,699",
+    },
+    {
+      "name": "Women's Kurti",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNRJTEN-s3I-s__Ze1yLszdlbxX0B6xObMg&s",
+      "price": "৳ 1,999",
+      "old": "৳ 2,699",
+    },
+    {
+      "name": "Boys Cotton Shirt",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIDUJeqUdpooGpYyjjg_5_RmSRyZhj1psNw&s",
+      "price": "৳ 1,499",
+      "old": "৳ 2,099",
+    },
+    {
+      "name": "Girls Party Dress",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8GkQro94UQv7RTq03lBNRWct4Z4Br11cqVw&s",
+      "price": "৳ 2,299",
+      "old": "৳ 3,099",
+    },
+  ];
 
 
 
@@ -404,7 +454,7 @@ class _HomeState extends State<Home> {
             SizedBox(height: 270,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-                itemCount: 5,
+                itemCount: TopTrending.length,
                 shrinkWrap: true,
                 itemBuilder: (context,i)=>Card(
               child: Column(
@@ -412,27 +462,27 @@ class _HomeState extends State<Home> {
                 children: [
                   Container(
                     height: 160,
-                    width: 100,
+                    width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                        fit: BoxFit.fill,
+                        fit: BoxFit.cover,
                           image:
-                      NetworkImage("https://dokanibahe.com/storage/products/313d7e0e-7794-4c9d-b04f-8935e9cca9c0.jpeg"))
+                      NetworkImage(image[i]["image"]))
                     ),
                   ),
                   Padding(padding: EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CustomText(text: 'Leadis hejab',fontWeight: FontWeight.bold,),
+                        CustomText(text: TopTrending[i]['name'],fontWeight: FontWeight.bold,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
 
-                            CustomText(text: "৳ 1720",fontWeight: FontWeight.bold,),
+                            CustomText(text: TopTrending[i]['price'],fontWeight: FontWeight.bold,),
 
-                            CustomText(text: "৳ 2220",tDeco: TextDecoration.lineThrough,color: Colors.black38,),
+                            CustomText(text: TopTrending[i]["old"],tDeco: TextDecoration.lineThrough,color: Colors.black38,),
                           ],
                         ),
                         CustomButton(title: "By Now", onTap: (){})
