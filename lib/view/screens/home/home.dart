@@ -394,7 +394,29 @@ class _HomeState extends State<Home> {
                     ),
                   )),
             ),
-            
+
+
+            TitleHeading(text: 'Top Trending Products', onTap: () {
+
+
+            },),
+            SizedBox(height: 190,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+                itemCount: 5,
+                shrinkWrap: true,
+                itemBuilder: (context,i)=>Card(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+
+                  )
+                ],
+
+              ),
+            )),
+            )
 
 
           ],
