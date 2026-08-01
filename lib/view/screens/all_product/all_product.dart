@@ -6,8 +6,9 @@ import '../../custom_widget/customCart.dart';
 import 'Widget/filter_section.dart';
 import 'Widget/productCardWidget.dart';
 class AllProduct extends StatelessWidget {
-  final List featureProducts;
-  const AllProduct({super.key,required this.featureProducts});
+  final featureProducts;
+
+  const AllProduct({super.key, required this.featureProducts});
 
 
 

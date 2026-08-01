@@ -94,6 +94,61 @@ class _HomeState extends State<Home> {
       "old": "৳ 4499",
       "offer": "-22%",
     },
+    {
+      "name": "Apple AirPods Pro 2",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-R_ryp2J3it0WpByvhO30KcPgiJc6RCWqUg&s",
+      "price": "৳24,999",
+    },
+    {
+      "name": "Dell Inspiron 15",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6u0-Q8bp4xZ9G32imJTKz9YCaMwH_TpjYRA&s",
+      "price": "৳72,999",
+    },
+    {
+      "name": "Samsung Galaxy Buds 3",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0ETBXxuhU3JQbTI4gGk3IsW9pwdS-k_eDA&s",
+      "price": "৳12,499",
+    },
+    {
+      "name": "Canon EOS 200D II",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBgOOIgALNzNmbIEh0MQKYF4uII6O5VDxrA&s",
+      "price": "৳65,000",
+    },
+    {
+      "name": "Adidas Sports Shoe",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSisdCfnR_elVzeVcVrXLc__Z00UI_V3fNK0Q&s",
+      "price": "৳4,299",
+    },
+    {
+      "name": "Logitech Wireless Mouse",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3wQYb4mFu4A78o086Kwv8Z9SNbl2m53Up5A&s",
+      "price": "৳1,499",
+    },
+    {
+      "name": "Mechanical Gaming Keyboard",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI5ivp0riZ9xsxkF9SFXtGdUbVQiiiLi7C-w&s",
+      "price": "৳3,999",
+    },
+    {
+      "name": "JBL Bluetooth Speaker",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSahcvkRGgHLEOktb0-38wNj-Ht9qeSseApRQ&s",
+      "price": "৳5,499",
+    },
+    {
+      "name": "Casual Denim Jacket",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDjOR-jbDlvVMdAgMthHyQmK4JskjyBP9L2A&s",
+      "price": "৳2,999",
+    },
+    {
+      "name": "Premium Leather Wallet",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROzk-V5x6pfG_S6_OMEet0_JcoNYg5ralew&s",
+      "price": "৳1,299",
+    },
+    {
+      "name": "iPhone 16 Pro",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4SPkQ_xl7xoOeiaO65SWQJ6WAkyV2CXwDA&s",
+      "price": "৳159,999",
+    },
   ];
   List products = [
     {
@@ -121,6 +176,8 @@ class _HomeState extends State<Home> {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_EVIb8y6v_0piCEuAk-B-XKx5RkeOusyuhg&s",
       "price": "৳3,299",
     },
+
+
   ];
 
   List image =[
@@ -259,7 +316,10 @@ class _HomeState extends State<Home> {
               ),
             ),
             
-            TitleHeading(text: 'New Arrivals', onTap: () {  },),
+            TitleHeading(text: 'New Arrivals', onTap: () {
+
+
+            },),
 
             SizedBox(
               height: 210,
