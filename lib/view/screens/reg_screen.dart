@@ -21,9 +21,10 @@ class _RegScreenState extends State<RegScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("REGISTER PAGE",style: TextStyle(fontWeight: FontWeight.bold),),
+          Text("REGISTER PAGE",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 26),),
           MyTextField(email: name, hint: "Enter your Name",icon: Icons.person,),
           MyTextField(email: email, hint: "Enter your Name",icon: Icons.email,),
           MyTextField(email: phone, hint: "Enter your phone",icon: Icons.phone,),
