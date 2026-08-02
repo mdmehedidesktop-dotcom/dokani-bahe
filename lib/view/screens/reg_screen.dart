@@ -29,6 +29,20 @@ class _RegScreenState extends State<RegScreen> {
           MyTextField(email: email, hint: "Enter your Name",icon: Icons.email,),
           MyTextField(email: phone, hint: "Enter your phone",icon: Icons.phone,),
           MyTextField(email: password, hint: "Enter your Password",icon: Icons.lock,suffixIcon: Icons.remove_red_eye,),
+          
+          Card(
+            margin: EdgeInsets.all(8),
+            color: Colors.blue,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(padding: EdgeInsets.all(8),
+                child: Text("Register",style: TextStyle(color: Colors.white),),
+                )
+              ],
+            ),
+          )
+          
         ],
       ),
       
