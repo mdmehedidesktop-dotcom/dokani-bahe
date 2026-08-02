@@ -41,6 +41,12 @@ class _RegScreenState extends State<RegScreen> {
                 )
               ],
             ),
+          ),
+          Row(
+            children: [
+              Text("Already Registered?"),
+              Text("Login Now",style: TextStyle(color: Colors.blue),)
+            ],
           )
           
         ],
