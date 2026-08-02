@@ -24,10 +24,10 @@ class _RegScreenState extends State<RegScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text("REGISTER PAGE",style: TextStyle(fontWeight: FontWeight.bold),),
-          MyTextField(email: name, hint: "Enter your Name"),
-          MyTextField(email: email, hint: "Enter your Name"),
-          MyTextField(email: phone, hint: "Enter your phone"),
-          MyTextField(email: password, hint: "Enter your Password"),
+          MyTextField(email: name, hint: "Enter your Name",icon: Icons.person,),
+          MyTextField(email: email, hint: "Enter your Name",icon: Icons.email,),
+          MyTextField(email: phone, hint: "Enter your phone",icon: Icons.phone,),
+          MyTextField(email: password, hint: "Enter your Password",icon: Icons.lock,suffixIcon: Icons.remove_red_eye,),
         ],
       ),
       

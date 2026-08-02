@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class MyTextField extends StatelessWidget {
   MyTextField({
     super.key,
-    required this.email,required this.hint,this.mLine
+    required this.email,required this.hint,this.mLine,this.icon,this.suffixIcon
   });
 
   TextEditingController email;
@@ -12,6 +12,11 @@ class MyTextField extends StatelessWidget {
   String hint;
 
   int?mLine;
+
+
+  final IconData? icon;
+
+  final IconData ? suffixIcon;
 
 
   @override
@@ -23,7 +28,8 @@ class MyTextField extends StatelessWidget {
         controller: email ,
         decoration: InputDecoration(
             labelText: hint,
-            prefixIcon: Icon(hint == "Password"? Icons.lock:Icons.email),
+            suffixIcon:suffixIcon != null ? Icon(suffixIcon) :null,
+            prefixIcon: Icon(icon),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             )
