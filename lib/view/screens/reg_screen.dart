@@ -43,9 +43,15 @@ class _RegScreenState extends State<RegScreen> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center ,
+            spacing: 16,
             children: [
               Text("Already Registered?"),
-              Text("Login Now",style: TextStyle(color: Colors.blue),)
+              InkWell(
+                onTap: (){
+
+                },
+                  child: Text("Login Now",style: TextStyle(color: Colors.blue),))
             ],
           )
           
