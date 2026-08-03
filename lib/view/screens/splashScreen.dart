@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_3/view/screens/home/home.dart';
+import 'package:project_3/view/screens/home/loginScreen.dart';
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
@@ -17,7 +18,7 @@ class _SplashscreenState extends State<Splashscreen> {
   }
   timerFun()async{
     await Future.delayed(Duration(seconds: 7)).then((v){
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
 
     });
 

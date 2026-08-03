@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_3/view/custom_widget/text_field.dart';
 import 'package:project_3/view/custom_widget/text_widget.dart';
+import 'package:project_3/view/screens/home/home.dart';
 
 import '../reg_screen.dart';
 class LoginScreen extends StatefulWidget {
@@ -26,18 +27,30 @@ class _LoginScreenState extends State<LoginScreen> {
             MyTextWidget(title: "Login Page",tSize: 28,),
             MyTextField(email: email, hint: "Email"),
             MyTextField(email: password, hint: "Password"),
-            Card(
-              margin: EdgeInsets.all(8),
-              color: Colors.blue,
-              child:Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(padding: const EdgeInsets.all(8.0),
-                    child: Text("Login",style: TextStyle(color: Colors.white,fontSize:25 ),),
-                  )
-                ],
-              ),
+            InkWell(
+              onTap: (){
+                if (email.text == "mdmehedidesktop@gmail.com" && password.text == "123456"){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                }else{
+                  print("Wrong Mail or Password");
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Wrong Mail or Password")));
+                }
 
+                },
+
+              child: Card(
+                margin: EdgeInsets.all(8),
+                color: Colors.blue,
+                child:Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(padding: const EdgeInsets.all(8.0),
+                      child: Text("Login",style: TextStyle(color: Colors.white,fontSize:25 ),),
+                    )
+                  ],
+                ),
+              
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
