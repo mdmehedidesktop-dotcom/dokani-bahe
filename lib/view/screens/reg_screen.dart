@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_3/view/custom_widget/text_field.dart';
+
+import 'home/loginScreen.dart';
 class RegScreen extends StatefulWidget {
   const RegScreen({super.key});
 
@@ -49,8 +51,8 @@ class _RegScreenState extends State<RegScreen> {
               Text("Already Registered?"),
               InkWell(
                 onTap: (){
-
-                },
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                  },
                   child: Text("Login Now",style: TextStyle(color: Colors.blue),))
             ],
           )

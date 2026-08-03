@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_3/view/custom_widget/text_field.dart';
 import 'package:project_3/view/custom_widget/text_widget.dart';
+
+import '../reg_screen.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -43,7 +45,11 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Text("Don't have an account? "),
                 InkWell
-                  (child: Text("Sign Up ",style: TextStyle(color: Colors.blue),))
+                  (
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>RegScreen()));
+                  },
+                    child: Text("Sign Up ",style: TextStyle(color: Colors.blue),))
               ],
             )
             
