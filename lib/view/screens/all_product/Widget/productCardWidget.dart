@@ -1,13 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../model/product.dart';
 import '../../../../utils/colors.dart';
 import '../../../custom_widget/text.dart';
 import 'filter_section.dart';
 class ProductCardWidget extends StatelessWidget {
   const ProductCardWidget({
-    super.key,
+    super.key, required this.pData,
   });
+
+  final productModel pData;
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class ProductCardWidget extends StatelessWidget {
                     fit: BoxFit.cover,
                     image:
                     NetworkImage(
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcV5xzl-6Mwr2ROSZA2mdgM1C16q1t8cEQhA&s"))
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTejCIOPBQ0qCPJ81MF1J9k2i2GiZm-aO9qFw&s"))
             ),
           ),
           Padding(
@@ -29,12 +35,13 @@ class ProductCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomText(text: "Remax Wireless Earbud",fontWeight: FontWeight.bold,),
+                CustomText(text:pData.title,fontWeight: FontWeight.bold,),
                 Row(
                   spacing: 7,
                   children: [
-                    CustomText(text: "৳ 1520",fontWeight: FontWeight.bold,),
-                    CustomText(text: "৳ 2499",tDeco: TextDecoration.lineThrough,color: Colors.black38,),
+                    CustomText(text: "৳ ${pData.dis_price}",fontWeight: FontWeight.bold,),
+                    CustomText(text: "৳ ${pData.reg_price
+                    }",tDeco: TextDecoration.lineThrough,color: Colors.black38,),
 
                     CustomText(text: "- 40%",color: AppColor.primaryColor,),
                   ],
