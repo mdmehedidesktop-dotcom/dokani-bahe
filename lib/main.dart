@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+
+import 'package:project_3/view/screens/EditprodileScreen.dart';
 import 'package:project_3/view/screens/all_product/all_product.dart';
 import 'package:project_3/view/screens/details/details.dart';
 import 'package:project_3/view/screens/home/home.dart';
 import 'package:project_3/view/screens/home/loginScreen.dart';
+import 'package:project_3/view/screens/My_account/my_account.dart';
 import 'package:project_3/view/screens/reg_screen.dart';
 import 'package:project_3/view/screens/splashScreen.dart';
 void main(){
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:AllProduct(),
+      home:MyAccount(),
     );
   }
 }
