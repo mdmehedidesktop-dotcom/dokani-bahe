@@ -3,6 +3,7 @@ import 'package:project_3/view/screens/Checkout_Screen/check_out.dart';
 
 import 'package:project_3/view/screens/EditprodileScreen.dart';
 import 'package:project_3/view/screens/My_Card/my_card.dart';
+import 'package:project_3/view/screens/My_Card/widget/my_cart.dart';
 import 'package:project_3/view/screens/Order_Success/order_success.dart';
 import 'package:project_3/view/screens/Order_Success/widget/header_widget.dart';
 import 'package:project_3/view/screens/all_product/all_product.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:CheckOut(),
+      home: MyCart(),
     );
   }
 }
