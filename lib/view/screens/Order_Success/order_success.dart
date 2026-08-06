@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project_3/utils/colors.dart';
+import 'package:project_3/view/screens/Order_Success/widget/Custom_Button.dart';
 import 'package:project_3/view/screens/Order_Success/widget/header_widget.dart';
 class OrderSuccess extends StatefulWidget {
   const OrderSuccess({super.key});
@@ -111,7 +113,16 @@ class _OrderSuccessState extends State<OrderSuccess> {
                       SizedBox(width: 10,),
                       Text("Our team will contact you if needed.")
                     ],
+                  ),
+                  SizedBox(height: 20,),
+                  Column(
+                    children: [
+                      CustomButtonDesine(title: "Continue Shopping", onTap: (){}),
+                      SizedBox(height: 10,),
+                      CustomButtonDesine(title: "View My Order",isEmptyBG: true, onTap: (){})
+                    ],
                   )
+
 
                 ],
               ),
