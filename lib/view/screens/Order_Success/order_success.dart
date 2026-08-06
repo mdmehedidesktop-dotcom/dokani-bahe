@@ -51,7 +51,7 @@ class _OrderSuccessState extends State<OrderSuccess> {
                     ],
                   ),
                   Divider(),
-                  SizedBox(height: 16,),
+                  SizedBox(height: 12,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -70,7 +70,7 @@ class _OrderSuccessState extends State<OrderSuccess> {
                 ],
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 8,),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -89,7 +89,7 @@ class _OrderSuccessState extends State<OrderSuccess> {
                       Text("We have sent an order confirmation\n to your email.")
                     ],
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 8,),
                   Row(
                     children: [
                       CircleAvatar(
@@ -102,7 +102,7 @@ class _OrderSuccessState extends State<OrderSuccess> {
                       Text("You can check your order status\n from Orders section")
                     ],
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 8,),
                   Row(
                     children: [
                       CircleAvatar(
@@ -114,7 +114,7 @@ class _OrderSuccessState extends State<OrderSuccess> {
                       Text("Our team will contact you if needed.")
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 10,),
                   Column(
                     children: [
                       CustomButtonDesine(title: "Continue Shopping", onTap: (){}),
