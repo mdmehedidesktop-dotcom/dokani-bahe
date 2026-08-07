@@ -3,7 +3,9 @@ class CustomTextField extends StatelessWidget {
   final String label;
   final String initialValue;
   final bool isDropdown;
-  const CustomTextField({super.key, required this.label, required this.initialValue, this.isDropdown = false,});
+  final Widget? suffixIcon;
+  final Widget? prefixIcon;
+  const CustomTextField({super.key, required this.label, required this.initialValue, this.isDropdown = false, this.suffixIcon, this.prefixIcon,});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class CustomTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide.none,
           ),
+          prefixIcon: prefixIcon,
           suffixIcon: isDropdown
               ? const Icon(Icons.keyboard_arrow_down, color: Colors.grey)
               : null,

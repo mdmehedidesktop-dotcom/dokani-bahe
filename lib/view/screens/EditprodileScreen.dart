@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_3/utils/colors.dart';
 import 'package:project_3/view/screens/widget/custom_text_field.dart';
 
 import '../custom_widget/text.dart';
@@ -74,7 +75,44 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 CustomTextField(label: "Date of Birth", initialValue: "02-09-2007")
 
               ],
-            )
+            ),
+            SizedBox(height: 10,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Address",
+                  style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                SizedBox(height: 10,),
+                CustomTextField(label: "Full Address", initialValue: "House 12,Road 5,Sector 9, Uttara"),
+
+                SizedBox(height: 5,),
+                Row(
+                  children: [
+                    Expanded(child: CustomTextField(label: "City", initialValue: "Dhaka")),
+                    SizedBox(width: 5,),
+                    Expanded(child: CustomTextField(label: "Postal Code", initialValue: "1230"))
+
+                  ],
+                ),
+                SizedBox(height: 5,),
+                CustomTextField(label: "Country", initialValue: "Bangladesh")
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Account Information",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Password"),
+                    Icon(Icons.chevron_right)
+                  ],
+                )
+              ],
+            ),
+            SizedBox(height: 10,),
+            
           ],
         )
 

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_3/view/custom_widget/text_field.dart';
-
-import 'home/loginScreen.dart';
+import 'package:project_3/view/screens/widget/custom_text_field.dart';
 class RegScreen extends StatefulWidget {
   const RegScreen({super.key});
 
@@ -10,56 +8,35 @@ class RegScreen extends StatefulWidget {
 }
 
 class _RegScreenState extends State<RegScreen> {
-
-  TextEditingController name =TextEditingController();
-  TextEditingController email =TextEditingController();
-  TextEditingController phone =TextEditingController();
-  TextEditingController password = TextEditingController();
-
-
-
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("REGISTER PAGE",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 26),),
-          MyTextField(email: name, hint: "Enter your Name",icon: Icons.person,),
-          MyTextField(email: email, hint: "Enter your Name",icon: Icons.email,),
-          MyTextField(email: phone, hint: "Enter your phone",icon: Icons.phone,),
-          MyTextField(email: password, hint: "Enter your Password",icon: Icons.lock,suffixIcon: Icons.remove_red_eye,),
-          
-          Card(
-            margin: EdgeInsets.all(8),
-            color: Colors.blue,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(padding: EdgeInsets.all(8),
-                child: Text("Register",style: TextStyle(color: Colors.white),),
-                )
-              ],
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center ,
-            spacing: 16,
+    return Scaffold (
+      appBar: AppBar(leading: Icon(Icons.arrow_back),),
+      body: SingleChildScrollView(
+        child:  Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Already Registered?"),
+              Text("Create Account",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              Text("Sign up to ge started",style: TextStyle(color: Colors.grey),),
+              SizedBox(height: 20,),
+              CustomTextField(label: "Full Name", initialValue: "Mehedi Hasan",prefixIcon: Icon(Icons.person),),
+              
+              CustomTextField(label: "Phone Number", initialValue: "+880 01610143246",prefixIcon: Icon(Icons.contact_phone),),
+              CustomTextField(label: "Email Address", initialValue: "mdmehedidesktop@gmail.com",prefixIcon: Icon(Icons.email),),
+              CustomTextField(label: "Password", initialValue: "123456",prefixIcon: Icon(Icons.lock,),suffixIcon:
               InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
-                  },
-                  child: Text("Login Now",style: TextStyle(color: Colors.blue),))
+                onTap: (){},
+                  child:
+                  Icon(Icons.remove_red_eye)),)
+
+
+
             ],
-          )
-          
-        ],
+          ),
+        ),
       ),
-      
     );
   }
 }
