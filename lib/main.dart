@@ -14,7 +14,8 @@ import 'package:project_3/view/screens/home/loginScreen.dart';
 import 'package:project_3/view/screens/My_account/my_account.dart';
 import 'package:project_3/view/screens/my_order/my_order.dart';
 import 'package:project_3/view/screens/my_order/widget/order_widget.dart';
-import 'package:project_3/view/screens/reg_screen.dart';
+import 'package:project_3/view/screens/reg_screen/reg_screen.dart';
+
 import 'package:project_3/view/screens/splashScreen.dart';
 void main(){
   runApp(MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:   RegScreen (),
+      home:  RegScreen (),
     );
   }
 }
